@@ -1,0 +1,61 @@
+{
+  "name": "webrtc-videochat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "dev": "webpack serve",
+    "start": "webpack serve --config ./webpack.config.js --mode=development --open --hot --progress",
+    "start:dev-server": "nodemon server/script/index.js",
+    "server": "node server/script/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.14.3",
+    "@babel/preset-env": "^7.13.15",
+    "@babel/preset-react": "^7.13.13",
+    "@babel/preset-typescript": "^7.13.0",
+    "@types/react": "^17.0.3",
+    "@types/react-dom": "^17.0.3",
+    "@types/socket.io": "^2.1.13",
+    "@types/socket.io-client": "^1.4.36",
+    "babel": "^6.23.0",
+    "cors": "^2.8.5",
+    "esbuild": "^0.14.8",
+    "esbuild-wasm": "^0.12.5",
+    "express": "^4.17.1",
+    "freeice": "^2.2.2",
+    "html-webpack-plugin": "^5.3.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-is": "^17.0.2",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
+    "socket.io": "^4.0.1",
+    "socket.io-client": "^4.0.1",
+    "styled-components": "^5.2.3",
+    "typescript": "^4.2.4",
+    "webpack": "^5.33.2",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.13.0",
+    "@babel/plugin-proposal-export-default-from": "^7.12.13",
+    "@babel/polyfill": "^7.12.1",
+    "@types/react-router": "^5.1.13",
+    "@types/react-router-dom": "^5.1.7",
+    "@types/styled-components": "^5.1.9",
+    "babel-loader": "^8.2.2",
+    "babel-plugin-styled-components": "^1.12.0",
+    "css-loader": "^5.2.2",
+    "file-loader": "^6.2.0",
+    "nodemon": "^2.0.15",
+    "style-loader": "^2.0.0"
+  },
+  "optionalDependencies": {
+    "fsevents": "*"
+  }
+}
