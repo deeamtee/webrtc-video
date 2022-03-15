@@ -1,17 +1,14 @@
 const express = require('express');
-const cors = require('cors')
+const http = require('http');
 const app = express();
-const path = require('path');
-const server = require('http').createServer(app);
+const server = http.createServer(app);
 
-const port = 8080;
+const PORT = 3010;
 
-app.use(cors())
-app.use(express.static(path.join(__dirname, '../public')));
+app.get('/', (req, res) => {
+    res.send({data: 'ok'})
+  });
 
-
-app.get('/api/rooms', function (_, res) {
-    res.send(JSON.stringify({data: 'data'}));
+server.listen(PORT, () => {
+  console.log(`listening on ${PORT}`);
 });
-
-server.listen(port, () => { console.log('Server listening at port %d', port); });

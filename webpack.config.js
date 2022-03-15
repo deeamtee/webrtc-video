@@ -46,14 +46,14 @@ module.exports = {
   devServer: {
     contentBase: path.join(__dirname, 'server/public'),
     proxy: {
-      '/ws': 'http://localhost:8080',
-      '/api': 'http://localhost:8080',
+      '/ws': 'http://localhost:3010',
+      '/api': 'http://localhost:3010',
     },
     historyApiFallback: {
       index: '/public'
     },
     hot: true,
-    port: 8090,
+    port: 3000,
   },
   watchOptions: {
     poll: true,
