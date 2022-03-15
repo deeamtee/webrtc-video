@@ -2,11 +2,15 @@ const express = require('express');
 const http = require('http');
 const app = express();
 const server = http.createServer(app);
-const { Server } = require("socket.io");
-const io = new Server(server);
-
 const PORT = 5001;
 
+const io = require("socket.io")(server, {
+    cors: {
+      origin: "http://localhost:3000",
+      methods: ["GET", "POST"]
+    }
+});
+  
 app.get('/', (req, res) => {
     res.send({data: 'ok'})
   });
